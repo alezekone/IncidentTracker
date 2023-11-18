@@ -11,5 +11,5 @@ public class Especialidad {
     private int idEspecialidad;
     private String nombre;
     private String descripcion;
-    List<TipoDeProblema> tiposDeProblemas = new ArrayList<>();
+    private List<TipoDeProblema> tiposDeProblema = new ArrayList<>();
 }

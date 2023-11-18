@@ -6,5 +6,5 @@ import lombok.Setter;
 @Getter @Setter
 public class TipoDeProblema {
     private int idTipoDeProblema;
-    private int tiempoMaximoResolucion;
+    private int maxHorasResolucion;
 }

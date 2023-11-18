@@ -10,8 +10,8 @@ import java.util.List;
 public class Incidente {
     private int nroIncidente;
     private Incidente incidente;
-    List<Problema> problemas = new ArrayList<>();
-    List<Tecnico> tecnicos = new ArrayList<>();
+    private List<Problema> problemas = new ArrayList<>();
+    private List<Tecnico> tecnicos = new ArrayList<>();
 
     public void asignarTecnico() {
 
