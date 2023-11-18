@@ -1,18 +1,16 @@
 package com.argprograma.etapa2.incidenttracker;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class Tecnico {
-    private String cuit;
-    private String razonSocial;
-    private String direccion;
-    private String email;
-    private String telefono;
-    private String dni;
-    private Date fechaDeNacimiento;
+@Getter @Setter
+public class Tecnico extends Persona {
     List<Especialidad> especialidades = new ArrayList<>();
+
     public void addProblema() {
 
     }

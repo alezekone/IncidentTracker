@@ -1,16 +1,17 @@
 package com.argprograma.etapa2.incidenttracker;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class Cliente {
-    private String cuit;
+@Getter @Setter
+public class Cliente extends Persona {
     private String razonSocial;
-    private String direccion;
-    private String email;
-    private String telefono;
     List<Servicio> servicios = new ArrayList<>();
-    List<Incidente> Incidentes = new ArrayList<>();
+    List<Incidente> incidentes = new ArrayList<>();
+
     public boolean addIncidente() {
         return true;
     }

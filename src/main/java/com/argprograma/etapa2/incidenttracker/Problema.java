@@ -1,7 +1,11 @@
 package com.argprograma.etapa2.incidenttracker;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.time.LocalDateTime;
 
+@Getter @Setter
 public class Problema {
     private int idProblema;
     private int tiempoEstimadoResolucion;
@@ -12,6 +16,7 @@ public class Problema {
     private Estado estado;
     private Tecnico tecnico;
     private TipoDeProblema tipoDeProblema;
+
     public void agregarHorasPorComplejidad(Complejidad complejidad) {
 
     }
