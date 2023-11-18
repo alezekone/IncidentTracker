@@ -11,5 +11,5 @@ public class Servicio {
     private int idServicio;
     private String nombre;
     private String descripcion;
-    List<TipoDeProblema> tipoDeProblemas = new ArrayList<>();
+    private List<TipoDeProblema> tiposDeProblema = new ArrayList<>();
 }

@@ -9,8 +9,8 @@ import java.util.List;
 @Getter @Setter
 public class Cliente extends Persona {
     private String razonSocial;
-    List<Servicio> servicios = new ArrayList<>();
-    List<Incidente> incidentes = new ArrayList<>();
+    private List<Servicio> servicios = new ArrayList<>();
+    private List<Incidente> incidentes = new ArrayList<>();
 
     public boolean addIncidente() {
         return true;
