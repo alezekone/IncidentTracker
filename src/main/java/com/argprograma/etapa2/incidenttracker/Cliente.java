@@ -15,4 +15,7 @@ public class Cliente extends Persona {
     public boolean addIncidente() {
         return true;
     }
+    public boolean addServicio() {
+        return true;
+    }
 }
