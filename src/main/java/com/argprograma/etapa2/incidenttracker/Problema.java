@@ -18,9 +18,9 @@ public class Problema {
     private TipoDeProblema tipoDeProblema;
 
     public void agregarHorasPorComplejidad(Complejidad complejidad) {
-
+        // TODO
     }
     public void agregarHorasAdicionales(int horas) {
-
+        // TODO
     }
 }

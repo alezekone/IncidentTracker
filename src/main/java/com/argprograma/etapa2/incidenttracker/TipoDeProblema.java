@@ -9,6 +9,6 @@ public class TipoDeProblema {
     private int maxHorasResolucion;
 
     public void setMaxHoras(int horas) {
-
+        // TODO
     }
 }
