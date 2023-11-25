@@ -11,10 +11,16 @@
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 
         <!-- Clases de entidad -->
-        <class>example.hibernate.pyme.models.Empleado</class>
-        <class>example.hibernate.pyme.models.Direccion</class>
-        <class>example.hibernate.pyme.models.Rol</class>
-        <class>example.hibernate.pyme.models.Sector</class>
+        <class>com.argprograma.etapa2.incidenttracker.Cliente</class>
+        <class>com.argprograma.etapa2.incidenttracker.Complejidad</class>
+        <class>com.argprograma.etapa2.incidenttracker.Especialidad</class>
+        <class>com.argprograma.etapa2.incidenttracker.Estado</class>
+        <class>com.argprograma.etapa2.incidenttracker.Incidente</class>
+        <class>com.argprograma.etapa2.incidenttracker.Persona</class>
+        <class>com.argprograma.etapa2.incidenttracker.Problema</class>	
+        <class>com.argprograma.etapa2.incidenttracker.Servicio</class>
+        <class>com.argprograma.etapa2.incidenttracker.Tecnico</class>
+        <class>com.argprograma.etapa2.incidenttracker.TipDeProblema</class>
         <properties>
             <!-- Propiedades de configuración de Hibernate -->
             <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect"/>
