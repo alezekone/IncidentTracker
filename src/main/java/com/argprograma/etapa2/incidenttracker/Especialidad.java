@@ -11,5 +11,9 @@ public class Especialidad {
     private int idEspecialidad;
     private String nombre;
     private String descripcion;
-    private List<TipoDeProblema> tiposDeProblema = new ArrayList<>();
+    private List<TipoDeProblema> tiposDeProblema;
+
+    public Especialidad() {
+        this.tiposDeProblema = new ArrayList<>();
+    }
 }

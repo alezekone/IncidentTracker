@@ -1,11 +1,23 @@
 package com.argprograma.etapa2.incidenttracker.notificacion;
 
+import com.argprograma.etapa2.incidenttracker.Persona;
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter @Setter
 public class CanalEmail implements CanalComunicacion {
-    DriverEmail driver = new DriverEmailTerminal();
-    //DriverEmail driver = new DriverEmailJakarta();
+    private DriverEmail driver;
+    private Persona receptor;
+
+    public CanalEmail(Persona receptor) {
+        this.receptor = receptor;
+
+        this.driver = new DriverEmailTerminal();
+        // this.driver = new DriverEmailJakarta();
+    }
 
     @Override
-    public void enviarNotificacion(Mensaje mensaje) {
-        driver.notificar(mensaje);
+    public String enviarNotificacion(Mensaje mensaje) {
+        return driver.notificar(mensaje, receptor);
     }
 }

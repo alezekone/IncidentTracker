@@ -16,6 +16,7 @@ public class Problema {
     private Estado estado;
     private Tecnico tecnico;
     private TipoDeProblema tipoDeProblema;
+    private Servicio servicio;
 
     public void agregarHorasPorComplejidad(Complejidad complejidad) {
         // TODO

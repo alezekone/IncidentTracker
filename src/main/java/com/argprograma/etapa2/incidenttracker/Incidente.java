@@ -3,15 +3,23 @@ package com.argprograma.etapa2.incidenttracker;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
 @Getter @Setter
 public class Incidente {
     private int nroIncidente;
-    private Incidente incidente;
-    private List<Problema> problemas = new ArrayList<>();
-    private List<Tecnico> tecnicos = new ArrayList<>();
+    private Servicio servicio;
+    private List<Problema> problemas;
+    private LocalDateTime horaInicio;
+    private LocalDateTime horaFin;
+    private List<Tecnico> tecnicos;
+
+    public Incidente() {
+        this.problemas = new ArrayList<>();
+        this.tecnicos = new ArrayList<>();
+    }
 
     public void asignarTecnico() {
         // TODO
