@@ -1,6 +1,6 @@
 package com.argprograma.etapa2.incidenttracker.clasificacion.tecnicos;
 
-import com.argprograma.etapa2.incidenttracker.Tecnico;
+import com.argprograma.etapa2.incidenttracker.modelo.Tecnico;
 
 import java.util.List;
 

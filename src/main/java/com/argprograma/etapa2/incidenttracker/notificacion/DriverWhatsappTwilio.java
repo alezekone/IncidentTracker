@@ -1,6 +1,6 @@
 package com.argprograma.etapa2.incidenttracker.notificacion;
 
-import com.argprograma.etapa2.incidenttracker.Persona;
+import com.argprograma.etapa2.incidenttracker.modelo.Persona;
 
 public class DriverWhatsappTwilio implements DriverWhatsapp {
     private String ACCOUNT_SID;

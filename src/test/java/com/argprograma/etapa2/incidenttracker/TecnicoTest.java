@@ -1,5 +1,6 @@
 package com.argprograma.etapa2.incidenttracker;
 
+import com.argprograma.etapa2.incidenttracker.modelo.Tecnico;
 import com.argprograma.etapa2.incidenttracker.notificacion.Canal;
 import com.argprograma.etapa2.incidenttracker.notificacion.Mensaje;
 import org.junit.jupiter.api.Assertions;

@@ -1,6 +1,6 @@
 package com.argprograma.etapa2.incidenttracker.notificacion;
 
-import com.argprograma.etapa2.incidenttracker.Persona;
+import com.argprograma.etapa2.incidenttracker.modelo.Persona;
 import com.sun.xml.fastinfoset.sax.Properties;
 import jakarta.mail.Session;
 

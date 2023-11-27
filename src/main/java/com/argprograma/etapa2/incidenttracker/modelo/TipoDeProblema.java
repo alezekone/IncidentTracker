@@ -1,4 +1,4 @@
-package com.argprograma.etapa2.incidenttracker;
+package com.argprograma.etapa2.incidenttracker.modelo;
 
 import lombok.Getter;
 import lombok.Setter;

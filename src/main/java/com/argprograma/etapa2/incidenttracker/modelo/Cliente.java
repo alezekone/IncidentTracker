@@ -1,5 +1,6 @@
-package com.argprograma.etapa2.incidenttracker;
+package com.argprograma.etapa2.incidenttracker.modelo;
 
+import com.argprograma.etapa2.incidenttracker.modelo.Persona;
 import com.argprograma.etapa2.incidenttracker.notificacion.Canal;
 import com.argprograma.etapa2.incidenttracker.notificacion.CanalComunicacion;
 import com.argprograma.etapa2.incidenttracker.notificacion.Mensaje;

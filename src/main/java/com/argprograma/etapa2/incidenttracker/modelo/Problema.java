@@ -1,5 +1,8 @@
-package com.argprograma.etapa2.incidenttracker;
+package com.argprograma.etapa2.incidenttracker.modelo;
 
+import com.argprograma.etapa2.incidenttracker.modelo.Estado;
+import com.argprograma.etapa2.incidenttracker.modelo.Complejidad;
+import com.argprograma.etapa2.incidenttracker.modelo.Tecnico;
 import lombok.Getter;
 import lombok.Setter;
 

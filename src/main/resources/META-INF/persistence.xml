@@ -1,36 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
-             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd"
-             version="2.2">
-    
-    <!-- Para entender esto, ver el siguiente link. -->
-    <!-- https://stackoverflow.com/questions/7251751/how-do-i-create-a-persistence-xml-file-for-jpa-and-hibernate -->
-
-    <persistence-unit name="JPA_PU" transaction-type="RESOURCE_LOCAL">
-        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
-
-        <!-- Clases de entidad -->
-        <class>com.argprograma.etapa2.incidenttracker.Cliente</class>
-        <class>com.argprograma.etapa2.incidenttracker.Complejidad</class>
-        <class>com.argprograma.etapa2.incidenttracker.Especialidad</class>
-        <class>com.argprograma.etapa2.incidenttracker.Estado</class>
-        <class>com.argprograma.etapa2.incidenttracker.Incidente</class>
-        <class>com.argprograma.etapa2.incidenttracker.Persona</class>
-        <class>com.argprograma.etapa2.incidenttracker.Problema</class>	
-        <class>com.argprograma.etapa2.incidenttracker.Servicio</class>
-        <class>com.argprograma.etapa2.incidenttracker.Tecnico</class>
-        <class>com.argprograma.etapa2.incidenttracker.TipDeProblema</class>
-        <properties>
-            <!-- Propiedades de configuración de Hibernate -->
-            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect"/>
-            <property name="hibernate.connection.driver_class" value="com.mysql.cj.jdbc.Driver"/>
-            <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/ormprueba?characterEncoding=utf8"/>
-            <property name="hibernate.connection.username" value="root"/>
-            <property name="hibernate.connection.password" value="***Poner lo que va***"/>
-            <property name="hibernate.hbm2ddl.auto" value="update"/>
-            <property name="hibernate.show_sql" value="true"/>
-            <property name="hibernate.format_sql" value="true"/>
-        </properties>
-    </persistence-unit>
+<persistence version="2.2" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd">
+  <!-- Para entender esto, ver el siguiente link. -->
+  <!-- https://stackoverflow.com/questions/7251751/how-do-i-create-a-persistence-xml-file-for-jpa-and-hibernate -->
+  <persistence-unit name="JPA_PU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+    <!-- Clases de entidad -->
+    <class>com.argprograma.etapa2.incidenttracker.modelo.Complejidad</class>
+    <class>com.argprograma.etapa2.incidenttracker.modelo.Estado</class>
+    <class>com.argprograma.etapa2.incidenttracker.modelo.TipDeProblema</class>
+    <class>com.argprograma.etapa2.incidenttracker.modelo.Persona</class>
+    <class>com.argprograma.etapa2.incidenttracker.modelo.Tecnico</class>
+    <class>com.argprograma.etapa2.incidenttracker.modelo.Cliente</class>
+    <class>com.argprograma.etapa2.incidenttracker.modelo.Especialidad</class>
+    <class>com.argprograma.etapa2.incidenttracker.modelo.Incidente</class>
+    <class>com.argprograma.etapa2.incidenttracker.modelo.Problema</class>
+    <class>com.argprograma.etapa2.incidenttracker.modelo.Servicio</class>
+    <properties>
+      <!-- Propiedades de configuración de Hibernate -->
+      <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect"/>
+      <property name="hibernate.connection.driver_class" value="com.mysql.cj.jdbc.Driver"/>
+      <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/incidenttrackerdb?characterEncoding=utf8"/>
+      <property name="hibernate.connection.username" value="root"/>
+      <property name="hibernate.connection.password" value="Pomelo1.!"/>
+      <property name="hibernate.hbm2ddl.auto" value="update"/>
+      <property name="hibernate.show_sql" value="true"/>
+      <property name="hibernate.format_sql" value="true"/>
+    </properties>
+  </persistence-unit>
 </persistence>
