@@ -18,7 +18,7 @@ public class IncidentTracker {
         // TODO
         Tecnico tecnico = new Tecnico("20-44.444.444-5","Eze Testing");
         TecnicoService tecnicoService = new TecnicoService();
-        // tecnicoService.create(tecnico);
+        tecnicoService.create(tecnico);
         
         System.out.println("Prueba.");
     }
