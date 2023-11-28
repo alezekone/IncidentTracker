@@ -2,7 +2,7 @@ package com.argprograma.etapa2.incidenttracker;
 
 import com.argprograma.etapa2.incidenttracker.modelo.Tecnico;
 import com.argprograma.etapa2.incidenttracker.notificacion.Canal;
-import com.argprograma.etapa2.incidenttracker.notificacion.Mensaje;
+import com.argprograma.etapa2.incidenttracker.modelo.Mensaje;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -13,7 +13,7 @@ public class TecnicoTest {
         Mensaje msj = new Mensaje();
         msj.setCuerpo("Mensaje personalizado");
 
-        Tecnico tecnico1 = new Tecnico(Canal.EMAIL);
+        Tecnico tecnico1 = new Tecnico("33333", "Leo", Canal.EMAIL);
         tecnico1.setEmail("tecnico1@gmail.com");
 
         String esperado = """
@@ -31,7 +31,7 @@ public class TecnicoTest {
         Mensaje msj = new Mensaje();
         msj.setCuerpo("Mensaje personalizado");
 
-        Tecnico tecnico2 = new Tecnico(Canal.WHATSAPP);
+        Tecnico tecnico2 = new Tecnico("444444", "Maria",Canal.WHATSAPP);
         tecnico2.setTelefono("+541143219423");
 
         String esperado = """

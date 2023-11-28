@@ -5,6 +5,7 @@
 package com.argprograma.etapa2.incidenttracker;
 
 import com.argprograma.etapa2.incidenttracker.modelo.Tecnico;
+import com.argprograma.etapa2.incidenttracker.notificacion.Canal;
 import com.argprograma.etapa2.incidenttracker.services.TecnicoService;
 import java.util.List;
 
@@ -16,9 +17,14 @@ public class IncidentTracker {
 
     public static void main(String[] args) {
         // TODO
-        Tecnico tecnico = new Tecnico("20-44.444.444-5","Eze Testing");
+
         TecnicoService tecnicoService = new TecnicoService();
-        tecnicoService.create(tecnico);
+
+        Tecnico tecnico1 = new Tecnico("1111111","Eze", Canal.EMAIL);
+        Tecnico tecnico2 = new Tecnico("2222222","Fran", Canal.WHATSAPP);
+
+        tecnicoService.create(tecnico1);
+        tecnicoService.create(tecnico2);
         
         System.out.println("Prueba.");
     }

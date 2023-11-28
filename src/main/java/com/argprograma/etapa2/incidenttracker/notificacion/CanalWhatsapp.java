@@ -1,5 +1,6 @@
 package com.argprograma.etapa2.incidenttracker.notificacion;
 
+import com.argprograma.etapa2.incidenttracker.modelo.Mensaje;
 import com.argprograma.etapa2.incidenttracker.modelo.Persona;
 import lombok.Getter;
 import lombok.Setter;
