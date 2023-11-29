@@ -28,9 +28,9 @@ public class Tecnico extends Persona implements Serializable {
     @OneToOne
     @JoinColumn(name="CUIT_CUIL", referencedColumnName="idProblema")
     private Problema problema;
-    @OneToOne
-    @JoinColumn(name="idIncidente", referencedColumnName="idIncidente")
-    private Incidente incidente;
+    @ManyToMany
+    //@JoinColumn(name="idIncidente", referencedColumnName="idIncidente")
+    private List<Incidente> incidentes;
 
     public Tecnico(String cuitcuil, String nombre, Canal canal){
         //super(cuitcuil, nombre, canal);

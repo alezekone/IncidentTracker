@@ -5,13 +5,14 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 @Entity
 @Table(name="incidente")
 @Getter @Setter
-public class Incidente {
+public class Incidente implements Serializable {
     @Id
     @Column(name="idIncidente")
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -25,13 +26,18 @@ public class Incidente {
     private LocalDateTime horaInicio;
     @Column(name="horaFin")
     private LocalDateTime horaFin;
-    @OneToMany
-    @JoinColumn(name = "idIncidente")
+    //@OneToMany
+    //@JoinColumn(name = "idIncidente")
+    //private List<Tecnico> tecnicos;
+    @ManyToMany(mappedBy="incidentes")
     private List<Tecnico> tecnicos;
+    @Column(name="terminado")
+    private boolean isDone;
+
 
     public Incidente() {
         this.problemas = new ArrayList<>();
-        this.tecnicos = new ArrayList<>();
+        //this.tecnicos = new ArrayList<>();
     }
 
     public void asignarTecnico() {
