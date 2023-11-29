@@ -12,9 +12,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+@Table(name="Cliente")
 @Getter @Setter @NoArgsConstructor
 public class Cliente extends Persona implements Serializable {
+
 
     @Column(name="razonSocial")
     private String razonSocial;
@@ -26,6 +27,10 @@ public class Cliente extends Persona implements Serializable {
     //@JoinColumn(name = "CUIT_CUIL")
     //@Transient
     //private List<Mensaje> mensajes;
+    //@OneToMany(mappedBy = "Cliente", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany
+    @JoinColumn(name = "CUIT_CUIL")
+    private List<Mensaje> mensajes;
 
     public Cliente(Canal canal) {
         this.servicios = new ArrayList<>();

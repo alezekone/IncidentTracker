@@ -23,4 +23,5 @@ public class Mensaje {
     @Column(name="fueMandado")
     boolean fueMandado;
 
+
 }

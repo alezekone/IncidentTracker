@@ -18,6 +18,10 @@ public class TipoDeProblema {
     @Column(name="maxHorasResolucion")
     private int maxHorasResolucion;
 
+    @OneToOne
+    @JoinColumn(name="idProblema", referencedColumnName="idProblema")
+    private Problema problema;
+
     public void setMaxHoras(int horas) {
         // TODO
     }

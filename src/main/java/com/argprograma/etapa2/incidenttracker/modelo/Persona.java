@@ -15,12 +15,14 @@ import javax.persistence.*;
 // es nuestro caso, la superclase es una entidad (tiene una PK.)
 
 @Entity
-@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+@Inheritance(strategy = InheritanceType.JOINED)
 @Setter @Getter @NoArgsConstructor
 public class Persona {
     @Id
     @Column(name="CUIT_CUIL")
     private String cuit_cuil;
+    @Column(name="DNI")
+    private String dni;
     @Column(name="apellido")
     private String apellido;
     @Column(name="nombre")

@@ -16,23 +16,30 @@ import javax.persistence.*;
 @Table(name="Tecnico")
 @Getter @Setter
 public class Tecnico extends Persona implements Serializable {
-
+    //private String CUIT_CUILT;
     @OneToMany
     @JoinColumn(name = "CUIT_CUIL")
     private List<Especialidad> especialidades;
-    @Column(name="especialidad")
-    private String especialidad;   // Solo para practicar persistencia. Luego, borrar.
-    //@OneToMany
-    //@JoinColumn(name = "CUIT_CUIL")
-    //rivate List<Mensaje> mensajes;
+    //@Column(name="especialidad")
+    //private String especialidad;   // Solo para practicar persistencia. Luego, borrar.
+    @OneToMany
+    @JoinColumn(name = "CUIT_CUIL")
+    private List<Mensaje> mensajes;
+    @OneToOne
+    @JoinColumn(name="CUIT_CUIL", referencedColumnName="idProblema")
+    private Problema problema;
+    @OneToOne
+    @JoinColumn(name="idIncidente", referencedColumnName="idIncidente")
+    private Incidente incidente;
 
     public Tecnico(String cuitcuil, String nombre, Canal canal){
         //super(cuitcuil, nombre, canal);
+
         this.setCuit_cuil(cuitcuil);
         this.setNombre(nombre);
         this.setCanal(canal);
         this.setMensajes(new ArrayList<>());
-        this.especialidad = "Generica";
+        //this.especialidad = "Generica";
         setCanalComunicacion(canal.crear(this));
     }
 

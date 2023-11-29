@@ -21,6 +21,9 @@ public class Servicio {
     @OneToMany
     @JoinColumn(name = "idServicio")
     private List<TipoDeProblema> tiposDeProblema;
+    @OneToOne
+    @JoinColumn(name="idProblema", referencedColumnName="idProblema")
+    private Problema problema;
 
     public Servicio() {
         this.tiposDeProblema = new ArrayList<>();
