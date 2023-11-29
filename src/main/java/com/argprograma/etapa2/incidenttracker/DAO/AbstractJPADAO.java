@@ -34,7 +34,6 @@ public class AbstractJPADAO<T extends Serializable> {
     public void create( T entity ){
         EntityTransaction tx = entityManager.getTransaction();
         tx.begin();
-        // System.out.println("Pasé por acá.");
         entityManager.persist( entity );
         tx.commit();
     }
